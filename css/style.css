@@ -14,5 +14,8 @@ a{
 .picture{
     width: 800px;
     height: 400px;
+}
+.footer-logo{
+    width: 98px;
     margin: 0 auto;
 }
