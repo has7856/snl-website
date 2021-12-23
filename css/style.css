@@ -1,3 +1,7 @@
+/* fee.html - style.css start */
+html{
+    scroll-behavior: smooth;
+}
 body{
     color: #191919;
     font-family: 'Nanum Gothic', sans-serif;
@@ -12,10 +16,119 @@ a{
     margin: 0 auto;
 }
 .picture{
-    width: 800px;
-    height: 400px;
+    height: 335px;
+    /* max-width: 100%; */
+    background: url(../images/heroImg.jpg) center no-repeat;
+}
+.menu{
+    background-color: #000000;
+    color: white;
+    text-align: center;
+}
+.menu li{
+    display: inline-block;
+    padding: 19.5px 0;
+}
+.menu li:nth-child(2){
+    margin: 0 30px;
+}
+.menu a:hover{
+    color: #01ccff;
+}
+caption{
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: 1.2rem;
+}
+table{
+    width: 35%;
+    margin: 0 auto;
+    font-size: 15px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+table, th, td{
+    border: 1px solid black;
+    padding: 10px 15px;
+    text-align: center;
+}
+#rowspan{
+    background-color: #ffeded;
+    vertical-align: middle;
+}
+.point{
+    color: red;
+    font-weight: 900;
+}
+th{
+    font-weight: 900;
+    background-color: #f7f7f7;
+}
+#tb_fee th{
+    width: 25%;
+}
+#tb_cast th{
+    width: 25%;
+}
+#tb_cast td{
+    text-align: left;
+    width: 75%;
+}
+.extra-menu{
+    text-align: center;
+    background-color: #fafafa;
+    border-top: 1px solid #666;
+}
+.extra-menu li{
+    display: inline-block;
+    padding: 15px 10px;
+    color: #666666;
+    font-size: 13px;
+}
+.extra-menu a:hover{
+    color: red;
+    text-decoration: underline;
+}
+.black-bg{
+    background-color: #191919;
 }
 .footer-logo{
     width: 98px;
     margin: 0 auto;
 }
+.footer-logo img{
+    margin-top: 20px;
+}
+#footer-letter{
+    color: #999999;
+    text-align: center;
+    overflow: hidden;
+}
+#footer-letter p{
+    margin: 20px;
+    font-size: 13px;
+}
+#top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    border-radius: 10px;
+    font-weight: 900;
+}
+
+/* fee.html - style.css end */
+
+/* responsive web design */
+@media screen (max-width : 480px) {
+    #tb_fee, #tb_cast{
+        max-width: 100%;
+    }
+}
+
+/* festival.html - style.css start */
