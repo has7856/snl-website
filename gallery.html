@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
+    <div id="modal">
+        <button id="close">&times;</button>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Wt6z-X7opYg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
     <h1 class="blind">SNL : 토크쇼</h1>
     <div id="header">
         <div class="logo">
@@ -34,20 +38,24 @@
                 <li><a href="fee.html">요금안내</a></li>
                 <li><a href="gallery.html">금주 베스트</a></li>
             </ul>
-        </div>
+        </div
     </div>
     <div id="main">
-            <div id="gallery">
-                <h2><span>금주 베스트</span></h2>
-                <div id="thumb">
-                    <img src="images/best1.jpg" alt="best1">
-                    <img src="images/best2.jpg" alt="best2">
-                    <img src="images/best3.jpg" alt="best3">
-                    <img src="images/best4.jpg" alt="best4">
-                    <img src="images/best5.jpg" alt="best5">
-                    <img src="images/best6.jpg" alt="best6">
-                </div>
-            </div>
+        <h2>금주 베스트</h2>
+        <table id="best">
+            <tr>
+                <td><img src="images/best1.jpg" alt="best1"></td>
+                <td><img src="images/best2.jpg" alt="best2"></td>
+                <td><img src="images/best3.jpg" alt="best3"></td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="overlay"><img src="images/play.png" alt="modal"></div>
+                    <img src="images/best4.jpg" alt="best4"></td>
+                <td><img src="images/best5.jpg" alt="best5"></td>
+                <td><img src="images/best6.jpg" alt="best6"></td>
+            </tr>
+        </table>
         </div>
     </div>
     <div id="footer">
@@ -71,5 +79,26 @@
     <div id="top">
         <a href="#header">TOP</a>
     </div>
+    <script>
+        // #overlay를 찾아라
+        // 클릭하면
+        // 모달창을 띄우라
+        var open = document.querySelector("#overlay");
+        var modal = document.querySelector("#modal");
+        var body = document.querySelector("body");
+
+        var close = document.querySelector("#close");
+
+        open.addEventListener("click", function(){
+            // 숨겨두었던 #modal을 노출시킨다.
+            modal.style.display = "block";
+            body.style.overflow = "hidden";
+        });
+
+        close.addEventListener("click", function(){
+            modal.style.display = "none";
+            body.style.overflow = "auto";
+        });
+    </script>
 </body>
 </html>

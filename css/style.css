@@ -222,17 +222,71 @@ figcaption{
 /* event.html - style.css end */
 
 /* gallery.html - style.css start */
-#gallery > h2{
+#main > h2{
     text-align: center;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     margin-top: 40px;
 }
-#thumb{
-    width: 1100px;
-    margin: 0 auto;
-    margin-bottom: 40px;
+#best{
+    width: 1000px;
 }
-#thumb > img{
-    margin: 25px 31px;
+#best, #best td{
+    border: 0 !important; /* !important 최우선 */
+}
+#best td{
+    padding: 15px;
+    position: relative;
+}
+#overlay{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* 변형 : 이동 (수평, 수직) */
+}
+/* #best tr:nth-child(2) td:nth-child(1)::before{
+    content: '';
+    display: block;
+    background: url(../images/play.png) no-repeat center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+} */
+#modal{
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+#overlay img:hover{
+    cursor: pointer;
+}
+iframe{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#close{
+    width: 100px;
+    height: 100px;
+    font-size: 5rem;
+    border-radius: 50%;
+    border: 0;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+}
+#close:hover{
+    cursor: pointer;
+    background:rgba(0, 0, 0, 0.9);
+    color: white;
 }
